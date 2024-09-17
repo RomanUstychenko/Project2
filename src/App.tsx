@@ -1,13 +1,12 @@
 import React from 'react';
-
 import './App.css';
+import ImageSearch from './pages/imageSearch';
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome to my React TypeScript Appssі!</h1>
-        <p>Let's start building amazing things🚀</p>
+      <ImageSearch />
       </header>
     </div>
   );
