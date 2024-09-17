@@ -1,0 +1,25 @@
+name: Build and deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        
+      - name: Install dependencies 🔧
+        run: |
+          npm install
+          npm run build
+
+      # Крок 3: Деплой на GitHub Pages
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # Гілка, куди відправляти зібраний код
+          folder: build  # Папка, в якій знаходиться зібраний проєкт
