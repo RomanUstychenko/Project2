@@ -17,9 +17,9 @@ jobs:
           npm install
           npm run build
 
-      # Крок 3: Деплой на GitHub Pages
+      
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.1.0
         with:
-          branch: gh-pages  # Гілка, куди відправляти зібраний код
-          folder: build  # Папка, в якій знаходиться зібраний проєкт
+          branch: gh-pages 
+          folder: build 
