@@ -10,8 +10,8 @@ jobs:
 
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
-        
+        uses: actions/checkout@v2.3.1
+
       - name: Install dependencies 🔧
         run: |
           npm install
@@ -19,7 +19,7 @@ jobs:
 
       # Крок 3: Деплой на GitHub Pages
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4.1.0
         with:
           branch: gh-pages  # Гілка, куди відправляти зібраний код
           folder: build  # Папка, в якій знаходиться зібраний проєкт
