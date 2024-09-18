@@ -1,4 +1,4 @@
-import scss from "./imageGallery.module.scss";
+import { ImageGalleryWrap, ImageGalleryList } from "./imageGallery.styled";
 import ImageGalleryItem from "./imageGalleryItem";
 
 // Оголошуємо інтерфейс для типізації items
@@ -14,16 +14,16 @@ interface ImageGalleryProps {
 
 export const ImageGallery: React.FC<ImageGalleryProps> = ({ items, onClick }) => {
   return (
-    <ul className={scss.ImageGallery}>
+    <ImageGalleryWrap>
       {items.map(({ id, webformatURL, largeImageURL, tags }) => (
-        <li className={scss.ImageGalleryItem} key={id}>
+        <ImageGalleryList key={id}>
           <ImageGalleryItem
             webformatURL={webformatURL}
             tags={tags}
             onClick={() => onClick({ largeImageURL })}
           />
-        </li>
+        </ImageGalleryList>
       ))}
-    </ul>
+    </ImageGalleryWrap>
   );
 };

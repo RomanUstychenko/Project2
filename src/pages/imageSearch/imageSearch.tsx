@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import Searchbar from '../components/searchbar/searchbar';
-import { searchImage } from '../components/API/fetch';
-import Loader from '../components/loader/loader';
-import { ImageGallery } from '../components/imageGallery/imageGallery';
-import { Button } from '../components/button/button';
-import Modal from '../components/modal/modal';
+import Searchbar from '../../components/imageSearch/searchbar/searchbar';
+import { searchImage } from '../../components/imageSearch/API/fetch';
+import Loader from '../../components/imageSearch/loader/loader';
+import { ImageGallery } from '../../components/imageSearch/imageGallery/imageGallery';
+import { Button } from '../../components/imageSearch/button/button';
+import Modal from '../../components/imageSearch/modal/modal';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 // Оголошення типів для зображень та стану модального вікна

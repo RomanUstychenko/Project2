@@ -1,11 +1,11 @@
 import scss from "./searchbar.module.scss";
-
+import { BackButton } from "./searchbar.styled";
 import { useState, ChangeEvent, FormEvent } from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from "nanoid";
 import { SubmitBnt } from "../button/button";
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-
+import { NavLink } from 'react-router-dom';
 // Тип для пропсів
 interface SearchbarProps {
   onSubmit: (inputSearch: string) => void;
@@ -48,6 +48,7 @@ export default function Searchbar({ onSubmit }: SearchbarProps) {
     <header 
     className={scss.Searchbar}
     >
+      <BackButton><NavLink to={'/'}>Go Back</NavLink></BackButton>
       <form
         className={scss.SearchForm}
         onSubmit={handleSubmit}
